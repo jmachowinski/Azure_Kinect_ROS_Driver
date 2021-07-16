@@ -186,6 +186,7 @@ K4AROSDevice::K4AROSDevice(const NodeHandle& n, const NodeHandle& p)
     if (!k4a_device_)
     {
       ROS_ERROR("Failed to open a K4A device. Cannot continue.");
+      ros::requestShutdown();
       return;
     }
 
